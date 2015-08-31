@@ -1,0 +1,11 @@
+  [1m[36m (141.6ms)[0m  [1mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "location" varchar, "descripition" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (120.7ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "full_name" varchar, "email" varchar, "password" varchar, "location" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "password_digest" varchar, "invoke" varchar, "active_record" varchar) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (135.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (134.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (143.8ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (157.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150829173105')
+  [1m[36m (167.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20150820235533')[0m
+  [1m[35m (156.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20150826230716')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
